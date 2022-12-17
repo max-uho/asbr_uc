@@ -11,7 +11,7 @@
 
 <body>
     <video id="background-video" autoplay loop muted playsinline>
-        <source src="assets/asbr.mp4" type="video/mp4">
+        <source src="assets/0.mp4" type="video/mp4">
     </video>
     <div class="centered">
         <div class="content">
@@ -26,6 +26,16 @@
             </p>
         </div>
     </div>
+    <script>
+        window.onload = chooseVid;
+
+        var myPix = new Array("assets/0.mp4","assets/1.mp4","assets/2.mp4","assets/3.mp4");
+
+        function chooseVid() {
+            var randomNum = Math.floor(Math.random() * myPix.length);
+            document.getElementById("background-video").src = myPix[randomNum];
+        }
+    </script>
 
 </body>
 
